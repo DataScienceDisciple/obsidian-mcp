@@ -1,0 +1,57 @@
+{
+  "name": "obsidian-mcp",
+  "version": "1.0.0",
+  "description": "Obsidian MCP TypeScript implementation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "obsidian-mcp": "dist/main.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "start:dev": "ts-node-dev --respawn src/main.ts",
+    "example": "ts-node examples/simple.ts",
+    "mcp": "node dist/main.js",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "obsidian",
+    "mcp",
+    "typescript",
+    "claude",
+    "ai",
+    "note-taking",
+    "pkm",
+    "model-context-protocol"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/obsidian-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/obsidian-mcp/issues"
+  },
+  "homepage": "https://github.com/yourusername/obsidian-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
